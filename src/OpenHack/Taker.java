@@ -14,11 +14,25 @@ public class Taker {
 		
 		System.out.println("#### Print all Bikepumps ####\n");
 		
-			Iterator<Bikepump> itr = bikePumps.keySet().iterator();
+		Iterator<Bikepump> itr = bikePumps.keySet().iterator();
 		
-			while (itr.hasNext()) {
-				Bikepump bikePump = (Bikepump) bikePumps.get(itr.next());
-				System.out.println(bikePump.getDescription());
-			}
+		while (itr.hasNext()) {
+			Bikepump bikePump = (Bikepump) bikePumps.get(itr.next());
+			System.out.println(bikePump.getDescription());
+		}
+		
+		/* Skriva ut för parking */
+		
+		Map parkLots = new HashMap<String, Parkings>();
+		parkLots = dw.fetchParks();
+		
+		System.out.println("#### Print all ParkingLots ####\n");
+			
+		Iterator<Parkings> itr2 = parkLots.keySet().iterator();
+		
+		while (itr2.hasNext()) {
+			Parkings parkLot = (Parkings) parkLots.get(itr2.next());
+			System.out.println(parkLot.toString());
+		}
 	}
 }
