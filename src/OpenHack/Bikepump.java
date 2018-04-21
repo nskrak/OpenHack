@@ -1,4 +1,4 @@
-package OpenHack;
+
 
 public class Bikepump { // kanske kan implementa ett interace som alla objekten ärver från
 
