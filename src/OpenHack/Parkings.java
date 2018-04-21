@@ -28,7 +28,7 @@ public class Parkings { // kanske kan implementa ett interace som alla objekten 
 		return latitude;
 	}
 	
-	public String getplace() {
+	public String getPlace() {
 		return place;
 	}
 	public String getStatus() {

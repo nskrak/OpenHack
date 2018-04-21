@@ -29,7 +29,6 @@ public class Taker {
 		System.out.println("#### Print all ParkingLots ####\n");
 			
 		Iterator<Parkings> itr2 = parkLots.keySet().iterator();
-		
 		while (itr2.hasNext()) {
 			Parkings parkLot = (Parkings) parkLots.get(itr2.next());
 			System.out.println(parkLot.toString());

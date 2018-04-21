@@ -80,16 +80,25 @@ public class DataWeb {
             URLConnection con = url.openConnection();
             InputStream is = con.getInputStream();	
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            
+            Object obj = parser.parse(br);
+            JSONObject jsonObject = (JSONObject) obj;
+            String nhits = jsonObject.get("nhits").toString(); 
 
+
+            url = new URL("https://helsingborg.opendatasoft.com/api/records/1.0/search/?dataset=parkering_new&rows=" + nhits);
+            // Get the input stream through URL Connection
+            con = url.openConnection();
+            is = con.getInputStream();	
+            br = new BufferedReader(new InputStreamReader(is));
             try {
             	 
-                Object obj = parser.parse(br);
-                JSONObject jsonObject = (JSONObject) obj;
+                obj = parser.parse(br);
+                jsonObject = (JSONObject) obj;
                 
-                long nhits = (Long) jsonObject.get("nhits"); 
-                int numberOfPumps = (int) nhits;
+//                long nhits = (Long) jsonObject.get("nhits"); 
+//                int numberOfPumps = (int) nhits;
                 
-                //JSONArray records = (JSONArray) jsonObject.get("records");
                 JSONArray records = (JSONArray) jsonObject.get("records");
                 
                 for(int i = 0; i < records.size(); i++){
