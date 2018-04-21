@@ -1,3 +1,5 @@
+package OpenHack;
+
 import java.io.IOException;
 
 public class Taker {
@@ -23,4 +25,5 @@ public class Taker {
 		}
 		
 	}
+	
 }

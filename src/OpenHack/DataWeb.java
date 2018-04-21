@@ -1,3 +1,5 @@
+package OpenHack;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,7 +38,7 @@ public class DataWeb {
             
             Object[][] xy = new Object[santal][2];
             
-            System.out.println("Träffar: " + antal);
+            System.out.println("Trï¿½ffar: " + antal);
             System.out.println("\nPumpar:");
             
             for(int i = 0; i < antal; i++){
