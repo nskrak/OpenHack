@@ -1,2 +1,0 @@
-# OpenHack
-tres ombres
