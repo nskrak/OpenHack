@@ -1,6 +1,8 @@
 package OpenHack;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Taker {
 	public static void main(String[] args)throws IOException{
@@ -23,7 +25,37 @@ public class Taker {
 				
 			}
 		}
+		System.out.println("####");
+		mapTest();
 		
 	}
 	
+	
+	public static void mapTest(){
+		
+		Map bikeP = new HashMap<String, Object>();
+		
+		Map attributes = new HashMap<String, Object>();
+		attributes.put("Longitude", 12);
+		attributes.put("Latitude", 23);
+		attributes.put("Description", "A pump dude");
+
+		
+		bikeP.put("Pump A", attributes);
+		
+		attributes.put("Longitude", 44);
+		attributes.put("Latitude", 68);
+		attributes.put("Description", "Another pump dude");
+		
+		bikeP.put("Pump B", attributes);
+
+		System.out.println(bikeP);
+		
+		System.out.println("#####");
+		
+
+		
+		
+		
+	}
 }
