@@ -2,10 +2,12 @@ package OpenHack;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Taker {
 	public static void main(String[] args)throws IOException{
+		/*
 		Object[][] xy = DataWeb.coords();
 		double[][] corr = new double[xy.length][xy[0].length];
 		String s;
@@ -26,7 +28,22 @@ public class Taker {
 			}
 		}
 		System.out.println("####");
-		mapTest();
+		*/
+		// ^---- OLD NEW / IN PROGRESS ---v
+		Map bikePumps = new HashMap<String, Bikepump>();
+		DataWeb dw = new DataWeb();
+		bikePumps = dw.fetchPumps();
+		
+		System.out.println("#### Print all Bikepumps ####\n");
+		
+			Iterator<Bikepump> itr = bikePumps.keySet().iterator();
+		
+			while (itr.hasNext()) {
+				Bikepump bikePump = (Bikepump) bikePumps.get(itr.next());
+				System.out.println(bikePump.getLatitude());
+			}
+		
+		// mapTest();
 		
 	}
 	
