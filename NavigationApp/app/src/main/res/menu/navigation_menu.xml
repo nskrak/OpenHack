@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/bikePumps"
+        android:icon="@mipmap/ic_directions_bike_black_24dp"
+        android:title="Bike pumps" />
+    <item android:id="@+id/parkingSpot"
+        android:icon="@mipmap/ic_local_parking_black_24dp"
+        android:title="Parking spots"/>
+</menu>
